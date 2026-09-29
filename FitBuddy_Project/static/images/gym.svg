@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+ <linearGradient id="g" x1="0" x2="1"><stop stop-color="#e8f2ff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+</defs>
+<rect width="1200" height="700" fill="url(#g)"/>
+<circle cx="930" cy="150" r="90" fill="#d8eaff"/>
+<circle cx="260" cy="510" r="170" fill="#e9f5ff"/>
+<path d="M180 520 C280 410 350 400 455 480 S650 580 770 450" fill="none" stroke="#9bc2ef" stroke-width="30" opacity=".55"/>
+<path d="M720 230 C800 170 880 180 940 245 C985 295 1000 390 940 450" fill="none" stroke="#77a9e7" stroke-width="28" opacity=".5"/>
+<text x="600" y="640" text-anchor="middle" font-family="Arial" font-size="48" fill="#54749b" opacity=".7">FITNESS • AI • WELLNESS</text>
+</svg>

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Your Personalized Workout Plan{% endblock %}
+{% block content %}
+<section class="container">
+  <h1>🏋️ Your Personalized Workout Plan</h1>
+
+  {% if message %}
+    <div class="success">✅ {{ message }}</div>
+  {% endif %}
+
+  <div class="profile card">
+    <h2>User Information</h2>
+    <div class="profile-grid">
+      <div><strong>Name:</strong> {{ user.name }}</div>
+      <div><strong>User ID:</strong> {{ user.user_id }}</div>
+      <div><strong>Age:</strong> {{ user.age }}</div>
+      <div><strong>Weight:</strong> {{ "%.1f"|format(user.weight) }} kg</div>
+      <div><strong>Goal:</strong> {{ user.goal }}</div>
+      <div><strong>Intensity:</strong> {{ user.intensity|capitalize }}</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📋 Workout Plan</h2>
+    <pre class="plan">{{ workout_plan }}</pre>
+  </div>
+
+  <div class="card tip">
+    <h2>💡 Nutrition Tip</h2>
+    <p>{{ nutrition_tip }}</p>
+  </div>
+
+  <div class="card">
+    <h2>📝 Share Your Feedback</h2>
+    <form method="post" action="/submit-feedback">
+      <input type="hidden" name="user_id" value="{{ user.user_id }}">
+      <label>Your Feedback</label>
+      <textarea name="feedback" required placeholder="e.g. Add more cardio, reduce intensity, include another rest day..."></textarea>
+      <button type="submit">Submit Feedback & Update Plan</button>
+    </form>
+  </div>
+
+  <a class="secondary-btn" href="/">← Generate Another Plan</a>
+</section>
+{% endblock %}
